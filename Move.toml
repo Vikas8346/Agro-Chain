@@ -1,0 +1,25 @@
+[package]
+name = "agri_chain"
+version = "1.0.0"
+authors = ["Agri-Chain Team"]
+
+[addresses]
+agri_chain = "_"
+std = "0x1"
+aptos_framework = "0x1"
+aptos_token_objects = "0x4"
+
+[dev-addresses]
+agri_chain = "0xb0b"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dependencies.AptosToken]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-token-objects"
+
+[dev-dependencies]

@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import fonts for multiple languages */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Gurmukhi:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    font-family: 'Inter', 'Noto Sans Devanagari', 'Noto Sans Gujarati', 'Noto Sans Gurmukhi', 'Noto Sans Telugu', 'Noto Sans Tamil', 'Noto Sans Bengali', sans-serif;
+  }
+  
+  /* Language-specific font support */
+  [lang="hi"], .lang-hi {
+    font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
+  }
+  
+  [lang="gu"], .lang-gu {
+    font-family: 'Noto Sans Gujarati', 'Inter', sans-serif;
+  }
+  
+  [lang="mr"], .lang-mr {
+    font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
+  }
+  
+  [lang="pa"], .lang-pa {
+    font-family: 'Noto Sans Gurmukhi', 'Inter', sans-serif;
+  }
+  
+  [lang="te"], .lang-te {
+    font-family: 'Noto Sans Telugu', 'Inter', sans-serif;
+  }
+  
+  [lang="ta"], .lang-ta {
+    font-family: 'Noto Sans Tamil', 'Inter', sans-serif;
+  }
+  
+  [lang="bn"], .lang-bn {
+    font-family: 'Noto Sans Bengali', 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 dark:bg-primary-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-700 dark:hover:bg-primary-600 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-500 dark:bg-secondary-400 text-white px-6 py-3 rounded-lg font-medium hover:bg-secondary-600 dark:hover:bg-secondary-500 transition-colors;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/20 p-6 border border-gray-100 dark:border-gray-700 transition-colors;
+  }
+}
